@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main()
+{
+	int num1, num2; // Declare variables 'num1' and 'num2' of integer type
+	int q, rem; // Declare variable 'q' & 'rem' to hold quotient and remainder 
+	
+	printf("Enter first number :"); // Display message to enter first number
+	scanf("%d", &num1); // Read first number 
+	
+	printf("Enter second number :"); // Display message to enter second number
+	scanf("%d", &num2); // Read second number
+	
+	if(num2==0) {
+		printf("Can't divide by zero.\n");
+		return 1;
+	}
+	
+	q = num1/num2; // Division gives us quetient
+	
+	rem = num1 % num2; // Using modulo operator (%) to get remainder 
+	
+	/* display quotient and remainder on screen */
+	printf("Quotient = %d, Remainder = %d\n", q, rem);
+	
+	return 0;
+}
+    
