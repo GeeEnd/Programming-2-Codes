@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main()
+{
+	char ch; // Declare character variable 'ch' 
+	
+	printf("Enter single characeter: "); // Display message to enter single character 
+	
+	scanf("%c", &ch); // Read single character in 'ch'
+	
+	/* Using switch case to match vowels. */
+	switch(ch) {
+		case 'a':
+		case 'A':
+		case 'e':
+		case 'E':
+		case 'i':
+		case 'I':
+		case 'o':
+		case 'O':
+		case 'u':
+		case 'U':
+			printf("Entered character is vowel.\n");
+			break;
+		default :
+			/* Given character is consonants if its ascii value is 
+			 * inbetween ascii value of ('a' and 'z') or ('A' and 'Z')
+			 */
+			if( (ch >='a' && ch<='z') || (ch >= 'A' && ch <= 'Z') )
+				printf("Entered character is consonants.\n");
+			else
+				printf("Entered character is neither vowel nor consonants.\n");
+	}
+}
+    
