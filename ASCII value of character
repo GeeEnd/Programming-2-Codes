@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main()
+{
+	char ch; // Declare variable 'ch' to get character value
+	
+	printf("Enter single character: "); // Display guide message to enter character
+	scanf("%c", &ch); // Read character in 'ch'
+	
+	// Using %c format specifier to print character 
+	// Using %d format specifier to print ASCII value of character
+	printf("ASCII value of '%c' is %d\n", ch, ch); 
+	
+	return 0;
+}
+    
