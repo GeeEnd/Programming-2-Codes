@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <limits.h>
+
+int main()
+{
+	int n; // variable 'n' to hold number of elements
+	int min_num=INT_MAX; // min_num to hold minimum number of all
+	int num; // 'num' to read single number entered by user
+	int i; // 'i' to iterate in for loop 
+	
+	// Display message to enter number of elements
+	printf("How many numbers do you want to enter? ");
+	scanf("%d", &n); // Read number in 'n'
+	
+	// Display message to enter numbers one by one
+	printf("Enter %d numbers one by one: ", n);
+	
+	// Read number one by one and compute minimum number of them
+	for(i=1; i<=n; i++) {
+		scanf("%d", &num); // Read number
+		
+		if(num < min_num)  // If entered number is less than min_num, update min_num
+			min_num = num;
+	}
+	
+	// Display minimum number of all 
+	printf("Minmum number = %d\n", min_num);
+	
+	return 0;
+}
+    
