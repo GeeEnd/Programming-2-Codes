@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main()
+{
+	char ch; // Declare character variable 'ch' 
+	
+	printf("Enter single characeter: "); // Display message to enter single character 
+	
+	scanf("%c", &ch); // Read single character in 'ch'
+	
+	// Check if given character is digit or not
+	if( ch >= '0' && ch <= '9' ) 
+		printf("Entered character is digit.\n");
+		
+	else if( (ch >='a' && ch<='z') || (ch >= 'A' && ch <= 'Z') ) // Check if given character is alphabet
+		printf("Entered character is alphabet.\n");
+		
+	else // Else it is none of them
+		printf("Entered character is neither digit nor alphabet.\n");
+}
+    
