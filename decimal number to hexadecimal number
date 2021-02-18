@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main()
+{
+    int num; // 'num' variable to hold decimal number
+    char hex_arr[100]; // array to hold Hexadecimal value
+    int i=0; // counter to iterate/index array elements
+    
+    printf("Enter decimal number:"); 
+    scanf("%d", &num); // Read number into 'num'
+    while(num){ // loop until num isn't 0
+      int temp = num%16; // num%16 will give single digit of hex 
+      
+      if(temp<10)
+        hex_arr[i] = '0' + temp;
+      else
+        hex_arr[i] = 'A' + (temp-10);
+        
+      num = num/16; // divide num by 16 to get next digit of Hexadecimal
+      i++;  // increment conuter to hold in next array element
+    }
+
+    printf("Hexadecimal number: ");
+    while(i--){ // iterate over array from large index to 0
+      printf("%c", hex_arr[i]); // print individual hex digits
+    }
+    return 0;
+}
+
