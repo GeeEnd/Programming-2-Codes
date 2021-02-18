@@ -1,0 +1,11 @@
+/*C Program to concatenate two strings without using strcat()*/
+#include <stdio.h>
+int main ()
+{
+  char s1[100], s2[100];	// two character arrays
+  int i, j;
+  printf ("Enter first string:\n");
+  fgets (s1, 100, stdin);	// Read string1 from stdin, of maximum length 100 
+  printf ("Enter second string:\n");
+  fgets (s2, 100, stdin);	// Read string2 from stdin, of maximum length 100 
+  
