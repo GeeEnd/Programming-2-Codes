@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+	int num; // Declare variable 'num' to hold value of number
+	int rev_num; // Declare variable 'rev_num' to hold value of revered number
+	int digit; // Declare variable 'digit' to hold digit of number
+	
+	// Display message to enter a number
+	printf("Enter a number: ");
+	
+	//Read number
+	scanf("%d", &num);
+	
+	rev_num = 0; // Initialize rev_num with 0
+	
+	// Using while loop to iterate over digits of numbers and generate reverse number
+	while(num){
+		digit = num % 10; // Extract single digit from end of number
+		
+		// Shift reversed number to left and append digit to end 
+		rev_num = rev_num * 10 + digit; 
+		
+		// Divide 'num' by 10 to get next digit from end of number
+		num = num/10;
+	}
+	
+	// Display reversed number
+	printf("Reverse number : %d\n", rev_num);
+}
+
+    
