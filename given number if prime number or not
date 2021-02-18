@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main()
+{
+	int num; // Declare variable 'num' to hold value of number
+	int i; // Declare variable 'i' to be used in for loop
+	
+	// Display message to enter a number
+	printf("Enter a number: ");
+	scanf("%d", &num); // Read number 
+	
+	/* For loop to check whether given number can be 
+	 * divisible by any number other than itself. 
+	 * If it can be divisible, then its not prime number
+	 */
+	for(i=2; i<=num/2; i++) 
+		if(num%i==0) {
+			printf("Given number isn't prime.\n");
+			return 0;
+		}
+	
+	// Given number is prime number
+	printf("Given number is prime.\n");
+	
+	return 0;
+}
+    
