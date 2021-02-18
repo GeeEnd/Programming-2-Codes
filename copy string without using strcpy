@@ -1,0 +1,11 @@
+/*C Program to copy string without using strcpy()*/
+#include <stdio.h>
+int main()
+{
+    char s1[100], s2[100],i;          //two character arrays s1,s2
+    printf("Enter string s1:\n");     
+    fgets(s1, 100, stdin);           // Read string from stdin, of maximum length 100 
+    for(i = 0; s1[i] != '\0'; ++i)   // copy to s2 
+    {
+        s2[i] = s1[i];
+    }
